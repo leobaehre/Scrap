@@ -1,6 +1,6 @@
 input.onPinPressed(TouchPin.P1, function () {
     basic.pause(500)
-    servos.P0.setAngle(0)
+    servos.P0.setAngle(10)
     basic.pause(500)
     servos.P0.setAngle(120)
     counter += 1
@@ -50,4 +50,10 @@ input.onPinPressed(TouchPin.P1, function () {
 let counter = 0
 counter = 0
 servos.P0.setAngle(120)
-basic.showIcon(IconNames.Asleep)
+basic.showLeds(`
+    . . . . .
+    . # # # .
+    . . . . .
+    # # . # #
+    . . . . .
+    `)
